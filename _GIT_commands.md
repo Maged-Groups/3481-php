@@ -62,3 +62,17 @@ NOTE: --soft means keep changes
 NOTE: --hard means remove changes
 ```
 
+## Link offline repo to online repo(GitHub)
+```bash
+git remote add origin <URL>
+```
+
+## Push all updates to online repo(GitHub) [First time]
+```bash
+git push -u origin main
+```
+
+## Push all updates to online repo(GitHub) [All times]
+```bash
+git push
+```
