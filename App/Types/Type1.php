@@ -2,9 +2,9 @@
 namespace App\Types; 
 class Type1
 {
-    public static function save()
+    public static function store()
 {
-return " saved";
+return " stored";
 }
 }
     
