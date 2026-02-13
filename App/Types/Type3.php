@@ -2,9 +2,9 @@
 namespace App\Types; 
 class Type3
 {
-    public static function show()
+    public static function destroy()
 {
-return "showed";
+return "destroyed";
 }
 }
     
