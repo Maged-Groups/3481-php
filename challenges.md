@@ -1,28 +1,16 @@
 # Challenges
 
-## Create a fork from the repo 
-https://github.com/Maged-Groups/3481-php.git
+## Challenge 1
+- Create the following array $males = ['Hany', 'Nader', ...]
+- Create a function named 'title' that add to the name 'MR. '
+- Use array_map to update the names
 
-## Link the forked repo to a local folder in your machine
+## Challenge 2
+- Create the following array $females = ['Hana', 'Nada', ...]
+- Create a function named 'title' that add to the name 'Miss '
+- Use array_map to update the names
 
-```bash
-git init
-
-git remote add <origin> <YOUR_FORKED_REPO_URL>
-
-git pull origin main
-```
-
-## Create a folder in your local repo with your name
-
-## Add 5 files into the created folder
-- Each file with any content
-- Each file with a separate commit
-
-## push your commits online
-
-```bash
-git push origin main
-```
-
-## Check your online repo
+## Challenge 3
+- Create the following array $nums = [5,4,9,2,10]
+- Create a function named 'square' that returns the square of the given number
+- Use array_map to update the numbers

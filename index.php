@@ -1,7 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
+require_once './App/Helpers/functions.php';
 
-App\Http\Controllers\UserController::index();
-App\Http\Controllers\UserController::destroy(2);
-App\Http\Controllers\UserController::show(99);
-App\Http\Controllers\UserController::store();
+// App\Http\Controllers\UserController::arrays();
+// App\Http\Controllers\UserController::add();
+// App\Http\Controllers\ProductController::index();
+App\Http\Controllers\ProductController::refine();
