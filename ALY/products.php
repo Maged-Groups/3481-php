@@ -182,3 +182,15 @@ $products = [
         "thumbnail" => "https://cdn.dummyjson.com/product-images/groceries/kiwi/thumbnail.webp"
     ]
 ];
+
+echo '<ol>';
+
+for ($i = 0; $i < count($products); $i++){
+    echo'<li>';
+    echo'-' . $products[$i]['title'];
+    echo'($' . $products[$i]['price'] . ')';
+    echo'<img src = "' . $products[$i]['thumbnail'] .' "width = 100>" ';
+    echo'</li>';
+    
+    };
+echo '</ol>';
