@@ -31,4 +31,18 @@ $age = array_filter($users, function ($user) {
 });
 
 
+## Question 4
+
+$users = [
+    ['name' => 'Ahmed', 'salary' => 4000],
+    ['name' => 'Sara', 'salary' => 6000],
+    ['name' => 'Mona', 'salary' => 5000],
+];
+
+$salary = array_map(function ($value) use ($users) {
+    return $users['salary'];
+    },
+    $users
+);
+
 
