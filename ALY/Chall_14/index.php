@@ -88,6 +88,17 @@ $div = array_filter($numbers, function ($value) {
 }); 
 
 
+## Question 9
 
+$users = [
+    ['name' => 'Omar', 'age' => 17],
+    ['name' => 'Laila', 'age' => 21],
+    ['name' => 'Hassan', 'age' => 15],
+    ['name' => 'Nour', 'age' => 30],
+];
+
+$age = array_filter($users, function ($user){
+    return $user['age'] >= 18;
+});
 
 
