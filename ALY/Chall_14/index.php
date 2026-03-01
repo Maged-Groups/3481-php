@@ -46,3 +46,12 @@ $salary = array_map(function ($value) use ($users) {
 );
 
 
+## Question 5
+
+$numbers = [1, 2, 3, 4, 5];
+$result = array_reduce($numbers, function ($carry, $number) use ($numbers){
+    return $carry * $number;
+},0);
+
+
+
