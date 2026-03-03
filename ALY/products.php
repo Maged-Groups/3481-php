@@ -186,7 +186,7 @@ $products = [
 echo '<ol>';
 
 for ($i = 0; $i < count($products); $i++){
-    echo'<li>';
+    echo "<li class='product-card'>";
     echo'-' . $products[$i]['title'];
     echo'($' . $products[$i]['price'] . ')';
     echo'<img src = "' . $products[$i]['thumbnail'] .' "width = 100>" ';
