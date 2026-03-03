@@ -14,4 +14,12 @@ ControlStructureController::ifCondition(99);
 ControlStructureController::ifCondition(79);
 ControlStructureController::ifCondition(33);
 
-// Test the temp function many times(5+)
+// Test the temp function many times(5+) 
+ 
+ControlStructureController::temp(30);
+ControlStructureController::temp(15);
+ControlStructureController::temp(35);
+ControlStructureController::temp(1);
+ControlStructureController::temp(2);
+
+
