@@ -2,7 +2,9 @@
     "name": "ali.ahmed/3481-php",
     "autoload": {
         "psr-4": {
-            "3481Php\\": "3481Php/"
+            "App\\": "App/",
+            "Challenges\\":"challenges/"
+            
         }
     },
     "authors": [
@@ -11,5 +13,7 @@
             "email": "aly.mohamed2707@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "symfony/var-dumper": "^8.0"
+    }
 }
