@@ -1,6 +1,5 @@
 <?php
-
-$products = [
+    $products = [
     [
         "id" => 1,
         "title" => "Essence Mascara Lash Princess",
@@ -180,17 +179,22 @@ $products = [
         "title" => "Kiwi",
         "price" => 2.49,
         "thumbnail" => "https://cdn.dummyjson.com/product-images/groceries/kiwi/thumbnail.webp"
-    ]
+    ],
 ];
+?>
 
-echo '<ol>';
 
-for ($i = 0; $i < count($products); $i++){
-    echo "<li class='product-card'>";
-    echo'-' . $products[$i]['title'];
-    echo'($' . $products[$i]['price'] . ')';
-    echo'<img src = "' . $products[$i]['thumbnail'] .' "width = 100>" ';
-    echo'</li>';
-    
-    };
-echo '</ol>';
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <?php foreach($products as $product)
+            include("views/card.php");
+        ?>
+    </body>
+</html>
