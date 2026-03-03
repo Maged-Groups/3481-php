@@ -1,11 +1,5 @@
-# Challenges
+<?php
 
-## Create a php file with an HTML content as a product card( Photo, Name, price)
-
-# loop the current array and dispaly the product card
-
-```php
-$products = <?php
 
 $products = [
     [
@@ -189,5 +183,15 @@ $products = [
         "thumbnail" => "https://cdn.dummyjson.com/product-images/groceries/kiwi/thumbnail.webp"
     ],
 ];
+/*foreach($products as $product){
+  include 'C:\wamp64\www\challenges\Marwan\ProductCardChallenge\card.php';
+}
+*/
+
 ?>
-```
+
+<div class="products-grid">
+    <?php foreach ($products as $product): ?>
+        <?php include 'card.php'; ?>
+    <?php endforeach; ?>
+</div>

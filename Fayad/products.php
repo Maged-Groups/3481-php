@@ -1,11 +1,4 @@
-# Challenges
-
-## Create a php file with an HTML content as a product card( Photo, Name, price)
-
-# loop the current array and dispaly the product card
-
-```php
-$products = <?php
+<?php
 
 $products = [
     [
@@ -190,4 +183,3 @@ $products = [
     ],
 ];
 ?>
-```

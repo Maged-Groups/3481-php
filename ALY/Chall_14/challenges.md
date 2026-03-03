@@ -1,35 +1,30 @@
+# PHP Array Higher Order Functions Practice
+
 ## Question 1
-
-### Solution
-
 ```php
 $numbers = [5, 12, 18, 25, 30, 42, 55];
 
 $result = array_filter($numbers, function ($number) {
-    return $number % 2 != 0;
+    return $number % 2 == 0;
 });
 ```
+المطلوب: اكتب كود يعيد الأرقام الفردية فقط.
 
 ---
 
 ## Question 2
-
-### Solution
-
 ```php
 $numbers = [10, 15, 20, 25, 30];
 
 $result = array_map(function ($number) {
-    return $number * $number;
+    return $number * 2;
 }, $numbers);
 ```
+المطلوب: اكتب كود يرجع مربع كل رقم بدلاً من ضربه ×2.
 
 ---
 
 ## Question 3
-
-### Solution
-
 ```php
 $users = [
     ['name' => 'Ahmed', 'age' => 22],
@@ -39,16 +34,14 @@ $users = [
 ];
 
 $result = array_filter($users, function ($user) {
-    return $user['age'] >= 30;
+    return $user['age'] < 30;
 });
 ```
+المطلوب: اكتب كود يرجع المستخدمين اللي أعمارهم أكبر من أو يساوي 30.
 
 ---
 
 ## Question 4
-
-### Solution
-
 ```php
 $users = [
     ['name' => 'Ahmed', 'salary' => 4000],
@@ -57,80 +50,58 @@ $users = [
 ];
 
 $result = array_map(function ($user) {
-    return $user['salary'];
+    return $user['name'];
 }, $users);
 ```
+المطلوب: اكتب كود يرجع مرتبات المستخدمين فقط.
 
 ---
 
 ## Question 5
-
-### Solution
-
 ```php
 $numbers = [1, 2, 3, 4, 5];
 
 $result = array_reduce($numbers, function ($carry, $number) {
-    return $carry * $number;
-}, 1);
+    return $carry + $number;
+}, 0);
 ```
+المطلوب: اكتب كود يستخدم `array_reduce` لحساب حاصل ضرب الأرقام.
 
 ---
 
 ## Question 6
-
-### Solution
-
 ```php
 $products = [
     ['name' => 'Laptop', 'price' => 15000],
     ['name' => 'Mouse', 'price' => 200],
     ['name' => 'Keyboard', 'price' => 500],
 ];
-
-$result = array_filter($products, function ($product) {
-    return $product['price'] > 1000;
-});
 ```
+المطلوب: اكتب كود باستخدام `array_filter` يرجع المنتجات اللي سعرها أكبر من 1000.
 
 ---
 
 ## Question 7
-
-### Solution
-
 ```php
 $products = [
     ['name' => 'Laptop', 'price' => 15000],
     ['name' => 'Mouse', 'price' => 200],
     ['name' => 'Keyboard', 'price' => 500],
 ];
-
-$result = array_map(function ($product) {
-    return strtoupper($product['name']);
-}, $products);
 ```
+المطلوب: اكتب كود باستخدام `array_map` يرجع أسماء المنتجات بحروف كبيرة (Uppercase).
 
 ---
 
 ## Question 8
-
-### Solution
-
 ```php
 $numbers = [3, 6, 9, 12, 15, 18];
-
-$result = array_filter($numbers, function ($number) {
-    return $number % 2 == 0 && $number % 3 == 0;
-});
 ```
+المطلوب: اكتب كود باستخدام `array_filter` يرجع الأرقام اللي تقبل القسمة على 3 و 2 معًا.
 
 ---
 
 ## Question 9
-
-### Solution
-
 ```php
 $users = [
     ['name' => 'Omar', 'age' => 17],
@@ -138,26 +109,17 @@ $users = [
     ['name' => 'Hassan', 'age' => 15],
     ['name' => 'Nour', 'age' => 30],
 ];
-
-$result = array_filter($users, function ($user) {
-    return $user['age'] >= 18;
-});
 ```
+المطلوب: اكتب كود باستخدام `array_filter` يرجع المستخدمين البالغين (age >= 18).
 
 ---
 
 ## Question 10
-
-### Solution
-
 ```php
 $orders = [
     ['id' => 1, 'total' => 250],
     ['id' => 2, 'total' => 450],
     ['id' => 3, 'total' => 300],
 ];
-
-$result = array_reduce($orders, function ($carry, $order) {
-    return $carry + $order['total'];
-}, 0);
 ```
+المطلوب: اكتب كود باستخدام `array_reduce` لحساب إجمالي مجموع الطلبات.

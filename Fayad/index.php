@@ -1,66 +1,40 @@
-<?php
+<?php include 'products.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 
-require __DIR__ . '/../vendor/autoload.php';
+  <header>
+    <h1>Collection</h1>
+    <span><?php echo count($products); ?> items</span>
+  </header>
 
-use Symfony\Component\VarDumper\VarDumper;
+  <div class="grid">
+    <?php foreach ($products as $product): ?>
+    <div class="card">
+      <div class="img-wrap">
+        <img src="<?php echo htmlspecialchars($product['thumbnail']); ?>"
+             alt="<?php echo htmlspecialchars($product['title']); ?>"
+             loading="lazy"/>
+      </div>
+      <div class="card-body">
+        <p class="card-id">#<?php echo $product['id']; ?></p>
+        <h2 class="card-title"><?php echo htmlspecialchars($product['title']); ?></h2>
+        <p class="card-price">$<?php echo number_format($product['price'], 2); ?></p>
+      </div>
+    </div>
+    <?php endforeach; ?>
+  </div>
 
-/*
-|--------------------------------------------------------------------------
-| Challenge 1
-|--------------------------------------------------------------------------
-*/
+  <footer>
+    &copy; <?php echo date('Y'); ?> &mdash; All rights reserved
+  </footer>
 
-// Original array
-$males = ['Hany', 'Nader', 'Karim', 'Ahmed'];
-
-// Function to prepend title
-function titleMale(string $name): string
-{
-    return 'MR. ' . $name;
-}
-
-// Update array using array_map
-$malesWithTitle = array_map('titleMale', $males);
-
-dump($malesWithTitle);
-
-
-
-/*
-|--------------------------------------------------------------------------
-| Challenge 2
-|--------------------------------------------------------------------------
-*/
-
-$females = ['Hana', 'Nada', 'Salma', 'Mona'];
-
-// Function to prepend title
-function titleFemale(string $name): string
-{
-    return 'Miss ' . $name;
-}
-
-$femalesWithTitle = array_map('titleFemale', $females);
-
-dump($femalesWithTitle);
-
-
-
-/*
-|--------------------------------------------------------------------------
-| Challenge 3
-|--------------------------------------------------------------------------
-*/
-
-$nums = [5, 4, 9, 2, 10];
-
-// Function to square numbers
-function square(int $num): int
-{
-    return $num * $num;
-}
-
-// Update array using array_map
-$squaredNums = array_map('square', $nums);
-
-dump($squaredNums);
+</body>
+</html>

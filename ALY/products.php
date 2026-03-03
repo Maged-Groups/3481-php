@@ -1,11 +1,4 @@
-# Challenges
-
-## Create a php file with an HTML content as a product card( Photo, Name, price)
-
-# loop the current array and dispaly the product card
-
-```php
-$products = <?php
+<?php
 
 $products = [
     [
@@ -187,7 +180,17 @@ $products = [
         "title" => "Kiwi",
         "price" => 2.49,
         "thumbnail" => "https://cdn.dummyjson.com/product-images/groceries/kiwi/thumbnail.webp"
-    ],
+    ]
 ];
-?>
-```
+
+echo '<ol>';
+
+for ($i = 0; $i < count($products); $i++){
+    echo'<li>';
+    echo'-' . $products[$i]['title'];
+    echo'($' . $products[$i]['price'] . ')';
+    echo'<img src = "' . $products[$i]['thumbnail'] .' "width = 100>" ';
+    echo'</li>';
+    
+    };
+echo '</ol>';
