@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Maged\Traits;
+namespace App\Http\Traits;
 
 trait ResponseTrait
 {
