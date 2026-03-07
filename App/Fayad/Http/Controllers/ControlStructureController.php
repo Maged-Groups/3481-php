@@ -50,7 +50,7 @@ public static function tempStatus(float $temp): string {
         return "Weatehr is Frozen.";
     }
 }
-    public static function weekDaysMessage ($dayName) {
+    public static function weekDaysMessage (string $dayName): string {
         // Use switch-case to get a message
         /**
          * Saturday and Friday  => Happy weekend
@@ -75,5 +75,17 @@ public static function tempStatus(float $temp): string {
             default:
                 return 'Wrong day name.';
         }
+    }
+    public static function DaysMessage(string $dayName): string {
+
+        $dayName = strtolower($dayName);
+
+        return match ($dayName) {
+            'sunday', 'monday',
+            'tuesday', 'wednesday',
+            'thursday' => 'Enjoy your work.',
+            'saturday', 'friday' => 'Happy weekend.',
+            default => 'Wrong day name.'
+        };
     }
 }
