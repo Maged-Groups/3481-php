@@ -1,0 +1,19 @@
+{
+    "name": "3481-php",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "Challenges\\":"challenges/"
+            
+        }
+    },
+    "authors": [
+        {
+            "name": "A7mad Hassan",
+            "email": "a7aljoker01@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "symfony/var-dumper": "^8.0"
+    }
+}

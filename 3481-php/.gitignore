@@ -1,0 +1,9 @@
+# Execluded folders
+/vendor
+
+# Execluded Files
+# challenges.md
+
+# Execluded extensions
+*.txt
+*.env
