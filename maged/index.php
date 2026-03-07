@@ -11,4 +11,4 @@ require_once '../App/Maged/Helpers/functions.php';
 
 
 
-App\Maged\Http\Controllers/ControlStructureController::weekDaysMessage ('Thursday');
+App\Maged\Http\Controllers\ControlStructureController::weekDaysMessage('Thursday');

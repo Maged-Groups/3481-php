@@ -108,7 +108,7 @@ class ControlStructureController
         echo 'Switch-case completed successfully';
     }
 
-    public static function weekDaysMessage(string $dayName): string
+  public static function weekDaysMessage(string $dayName): string
     {
         $dayName = strtolower($dayName);
 
@@ -118,10 +118,10 @@ class ControlStructureController
             case 'tuesday':
             case 'wednesday':
             case 'thursday':
-                return 'Enjoy your work';
+                return 'Enjoy your work.';
 
-            case 'friday':
-            case 'saturday':
+          case 'friday':
+           case 'saturday':
                 return 'Happy weekend';
 
             default:

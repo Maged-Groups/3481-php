@@ -1,5 +1,5 @@
 {
-    "name": "ali.ahmed/3481-php",
+    "name": "3481-php",
     "autoload": {
         "psr-4": {
             "App\\": "App/",
@@ -9,11 +9,12 @@
     },
     "authors": [
         {
-            "name": "Aly Mohamed",
-            "email": "aly.mohamed2707@gmail.com"
+            "name": "A7mad Hassan",
+            "email": "a7aljoker01@gmail.com"
         }
     ],
     "require-dev": {
         "symfony/var-dumper": "^8.0"
     }
 }
+
