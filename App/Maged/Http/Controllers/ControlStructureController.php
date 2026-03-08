@@ -116,7 +116,7 @@ class ControlStructureController
          */
         switch ($dayname){
 
-       case 'saturday':
+        case 'saturday':
         return 'Happy weekend';
         case 'Friday':
             return 'Happy weekend';

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Maged\Http\Controllers;
+namespace App\Aly\Http\Controllers;
 
 class ControlStructureController
 {
@@ -40,10 +40,43 @@ if($temp >=35){
 elseif($temp>=15){ echo"Coll<br>";}
 elseif($temp>=5){ echo"Cold<br>";}
 else {echo "Frozen<br>";}
-
-
 }
 
+    public static function switchCase($dayNumber)
+    {
+        switch ($dayNumber){
+            case 0:
+                echo "It is Sunday";
+                break;
+                
+            case 1:
+                echo "It is Monday";
+                break;
+        
+            case 2:
+                echo "Iy is Tuesday";
+                break;
+
+            case 3:
+                echo "It is Wednesday";
+                break;
+            
+            case 4:
+                echo "It is Thursday";
+                break;
+                
+            case 5:
+                echo "It is Friday";
+                break;
+                
+            case 6:
+                echo "It is Saturday";
+                break;
+                
+            default:
+            echo "Wrong day number";    
+        }
+    }
 
 
 }
