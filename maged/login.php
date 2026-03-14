@@ -20,6 +20,8 @@
         </div>
 
         <button>Login</button>
+
+        <p>Do not have account? <a href="/maged/auth/register.php">Register now</a></p>
     </form>
 </body>
 
