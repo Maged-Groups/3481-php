@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Maged\Http\Controllers;
+namespace App\Marwan\Http\Controllers;
 
 class ControlStructureController
 {
@@ -118,7 +118,7 @@ class ControlStructureController
             case 'tuesday':
             case 'wednesday':
             case 'thursday':
-                return 'Enjoy your work.';
+                return 'Enjoy your work';
 
             case 'friday':
             case 'saturday':
@@ -127,6 +127,18 @@ class ControlStructureController
             default:
                 return 'Wrong day name!!!';
         }
+    }
+    public static function weekDaysMessageMatch(string $dayName): string
+    {
+        $dayName = strtolower($dayName);
+
+        return match ($dayName) {
+             'sunday','monday','tuesday','wednesday','thursday' => 'Enjoy your work',
+             
+            'friday','saturday'=>'Happy weekend',
+             
+             default=> 'Wrong day name!!!'
+        };
     }
 
     public static function matchCase(string $status): string
@@ -149,19 +161,5 @@ class ControlStructureController
             'cancelled', 'refunded' =>  'red',
             default => 'gray'
         };
-    }
-
-    public static function printOdd(int $min, int $max): array
-    {
-        $oddNumbers = [];
-
-        for ($i = $min; $i <= $max; $i++) {
-
-            if ($i % 2 === 0) continue;
-
-            $oddNumbers[] = $i;
-        }
-
-        return $oddNumbers;
     }
 }

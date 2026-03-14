@@ -50,6 +50,8 @@ class ControlStructureController
         }
     }
 
+
+
     public static function switchCase($dayNumber)
     {
         switch ($dayNumber) {
@@ -82,24 +84,22 @@ class ControlStructureController
         echo 'Switch-case completed successfully';
     }
 
-    public static function getDayArName(string $enName): string
+    public static function getDayArName($enName)
     {
-        $enName = strtolower($enName);
-
         switch ($enName) {
-            case 'sunday':
+            case 'Sunday':
                 return 'الأحد';
-            case 'monday':
+            case 'Monday':
                 return 'الإثنين';
-            case 'tuesday':
+            case 'Tuesday':
                 return 'الثلاثاء';
-            case 'wednesday':
+            case 'Wednesday':
                 return 'الأربعاء';
-            case 'thursday':
+            case 'Thursday':
                 return 'الخميس';
-            case 'friday':
+            case 'Friday':
                 return 'الجمعة';
-            case 'saturday':
+            case 'Saturday':
                 return 'السبت';
             default:
                 return 'Wrong day name!!!';
@@ -108,60 +108,16 @@ class ControlStructureController
         echo 'Switch-case completed successfully';
     }
 
-    public static function weekDaysMessage(string $dayName): string
-    {
-        $dayName = strtolower($dayName);
-
-        switch ($dayName) {
-            case 'sunday':
-            case 'monday':
-            case 'tuesday':
-            case 'wednesday':
-            case 'thursday':
-                return 'Enjoy your work.';
-
-            case 'friday':
-            case 'saturday':
-                return 'Happy weekend';
-
-            default:
-                return 'Wrong day name!!!';
-        }
-    }
-
-    public static function matchCase(string $status): string
-    {
-        // $colorMap = [
-        //     'pending' => 'orange',
-        //     'shipped' => 'blue',
-        //     'delivered' => 'green',
-        //     'approved' =>  'green',
-        //     'cancelled' =>  'red',
-        //     'refunded' =>  'red',
-        // ];
-
-        // return $colorMap[$status] ?? 'gray';
-
-        return match ($status) {
-            'pending' => 'orange',
-            'shipped' => 'blue',
-            'delivered', 'approved' =>  'green',
-            'cancelled', 'refunded' =>  'red',
-            default => 'gray'
+    public static function weekDaysMessage ($dayName) {
+        // Use switch-case to get a message
+        /**
+         * Saturday and Friday  => Happy weekend
+         * Sunday - Thursday    => Enjoy your work
+         */
+        match ($dayName) {
+            "sunday","monday","tuesday","wednesday","thursday" => 'Enjoy your work',
+            "friday","saturday" => 'Happy weekend',
+            default => 'Wrong Day'
         };
-    }
-
-    public static function printOdd(int $min, int $max): array
-    {
-        $oddNumbers = [];
-
-        for ($i = $min; $i <= $max; $i++) {
-
-            if ($i % 2 === 0) continue;
-
-            $oddNumbers[] = $i;
-        }
-
-        return $oddNumbers;
     }
 }
