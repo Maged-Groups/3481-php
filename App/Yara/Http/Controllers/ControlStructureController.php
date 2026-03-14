@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Yara\Http\Controllers;
 
 class ControlStructureController
 {
@@ -41,24 +41,24 @@ class ControlStructureController
             echo "the $degree is normal<hr >";
         } elseif ($degree <= 15) {
             echo "the $degree is cold<hr >";
-      } elseif ($degree <= 0) {
+        } elseif ($degree <= 0) {
             echo "the $degree is frozen<hr >";
-       
         }
     }
-};
-
-public static function weatherCondition($temp){
-if($temp >=35){
-    echo"too hot";
-}elseif($temp>=25){ echo"Normal<br>";}
-elseif($temp>=15){ echo"Coll<br>";}
-elseif($temp>=5){ echo"Cold<br>";}
-else {echo "Frozen<br>";}
 
 
-}
-
-
-
+    public static function weatherCondition($temp)
+    {
+        if ($temp >= 35) {
+            echo "too hot";
+        } elseif ($temp >= 25) {
+            echo "Normal<br>";
+        } elseif ($temp >= 15) {
+            echo "Coll<br>";
+        } elseif ($temp >= 5) {
+            echo "Cold<br>";
+        } else {
+            echo "Frozen<br>";
+        }
+    }
 }

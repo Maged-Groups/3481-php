@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Yara\Models;
 
 class Product extends Model
 {

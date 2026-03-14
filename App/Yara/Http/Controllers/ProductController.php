@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Yara\Http\Controllers;
 
 use \App\Helpers\Str;
 
