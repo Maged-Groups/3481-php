@@ -1,49 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+var_dump($_POST);
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-</head>
 
-<body>
-    <h1>Register</h1>
-    <form method="post" action="check-user.php" enctype="multipart/form-data">
-        <div>
-            <label for="email">Eamil</label>
-            <input type="email" id="email" name="email">
-        </div>
-        
-        <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
-        </div>
-        
-        <div>
-            <label for="password_confirmation">Confirm Password</label>
-            <input type="password" id="password_confirmation" name="password_confirmation">
-        </div>
-        
-        <div>
-            <label for="nid_face">National ID Face</label>
-            <input type="file" id="nid_face" name="nid_face">
-        </div>
-        
-        <div>
-            <label for="nid_back">National ID Back</label>
-            <input type="file" id="nid_back" name="nid_back">
-        </div>
+$fullName = $_POST['fullname'] ?? '';
 
-        <div>
-            <label for="mobile">Mobile</label>
-            <input type="text" name="mob">
-        </div>
+if ($fullName == '') {
+    echo 'Full name cannot be empty';
+} elseif (strlen($fullName) < 3 || strlen($fullName) > 60) {
+    echo 'Full name should be between 3 and 60 letters only';
+} else {
+    echo 'Fullname is valid';
+}
+die();
+$email =  $_POST['email'];
+$phone =  $_POST['phone'];
+$dob =  $_POST['dob'];
+$gender =  $_POST['gender'];
+$nationality =  $_POST['nationality'];
+$bio =  $_POST['bio'];
+$street =  $_POST['street'];
+$city =  $_POST['city'];
+$state =  $_POST['state'];
+$zip =  $_POST['zip'];
+$country =  $_POST['country'];
+$username =  $_POST['username'];
+$password =  $_POST['password'];
+$confirm_password =  $_POST['confirm_password'];
+$security_question =  $_POST['security_question'];
+$security_answer =  $_POST['security_answer'];
+$language =  $_POST['language'];
+$referral =  $_POST['referral'];
+$fav_color =  $_POST['fav_color'];
+$fav_color_text =  $_POST['fav_color_text'];
+$employment =  $_POST['employment'];
+$experience =  $_POST['experience'];
+$comments =  $_POST['comments'];
 
-        <button>Register</button>
 
-        <p>Do not have account? <a href="/maged/auth/register.php">Register now</a></p>
-    </form>
-</body>
 
-</html>
+var_dump($fullName);

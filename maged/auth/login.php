@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+echo 'Checking user data.......';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-
-<body>
-    <h1>Login</h1>
-    <form method="post" action="check-user.php">
-        <div>
-            <label for="email">Eamil</label>
-            <input type="email" id="email" name="email">
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
-        </div>
-
-        <button>Login</button>
-
-        <p>Do not have account? <a href="/maged/auth/register.php">Register now</a></p>
-    </form>
-</body>
-
-</html>
+var_dump($_GET);
+var_dump($_POST);
+var_dump($_FILES);
+$email = $_POST['email'] ?? '';
+$password = $_POST['password'] ?? '';
