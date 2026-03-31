@@ -4,6 +4,8 @@ namespace App\Maged\Models;
 
 class Product extends Model
 {
+    public static string $table = 'products';
+
     public static string $title;
 
     protected static float $price;

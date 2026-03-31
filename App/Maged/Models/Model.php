@@ -2,13 +2,21 @@
 
 namespace App\Maged\Models;
 
+use mysqli;
+
 class Model
 {
     protected static string $table;
 
-    protected int $id;
+    protected static string $id;
 
     private bool $exists;
+
+    private static function connect()
+    {
+        // Connection
+        return new mysqli('localhost', 'root', '', 'php_3481');
+    }
 
     public static function save()
     {
@@ -20,8 +28,20 @@ class Model
     }
     public static function all()
     {
-        return "App\Models\Model@all fired";
+
+        $db = self::connect();
+
+        $table = static::$table;
+
+        // Run Query
+        $res =  $db->query("SELECT * FROM $table;");
+
+        // Fetch Data
+        $data = $res->fetch_all(MYSQLI_ASSOC);
+
+        return $data;
     }
+
     protected static function beforeSave()
     {
         return "App\Models\Model@beforeSave fired";
