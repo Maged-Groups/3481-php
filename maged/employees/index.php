@@ -1,10 +1,11 @@
 <?php
 require_once '../../vendor/autoload.php';
 
-use App\A7mad\Http\Controllers\ProductController;
+use App\Maged\Http\Controllers\EmployeeController;
 
 header('Content-Type: application/json');
 
-$jsonData = ProductController::list_all();
+$jsonData = EmployeeController::list_all();
 
 echo $jsonData;
+    

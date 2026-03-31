@@ -1,9 +1,4 @@
 <?php
-
-$method = $_SERVER['REQUEST_METHOD'] ?? '';
-
-if ($method !== 'GET') die('Only GET method is required');
-
 $users = [
     [
         "id" => 1,
@@ -217,6 +212,5 @@ $users = [
     ]
 ];
 
-echo 'TEST USERS API';
 $users_json = json_encode($users);
 echo $users_json;

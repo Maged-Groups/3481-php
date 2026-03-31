@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Maged\Models;
+namespace App\A7mad\Models;
 
 class Product extends Model
 {
