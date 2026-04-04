@@ -1,4 +1,11 @@
 <?php
+
+var_dump($_SERVER["REQUEST_METHOD"]);
+
+$method = $_SERVER["REQUEST_METHOD"] ?? "";
+
+if ($method !== "POST") die("The request method is not allowed, only POST method is allowed!!!");
+
 $carts = [
     [
         "id" => 1,
