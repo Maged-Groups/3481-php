@@ -23,6 +23,8 @@
 
         <p>Do not have account? <a href="/aly/auth/register.php">Register now</a> </p>
     </form>
+
+    
 </body>
 
 </html>
